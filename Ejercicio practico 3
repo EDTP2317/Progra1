@@ -1,0 +1,373 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string info= "";
+		double peso= 0;
+		int actividad= 0;
+		int opciones=0;
+		int tipo = 0;
+		int edad = 0;
+		do{	
+			
+		Console.WriteLine("Perro adulto 1, Cachorro 2");
+		info= Console.ReadLine();
+		tipo= Convert.ToInt32(info);
+		
+		switch(tipo){
+		case 1:		
+		Console.WriteLine("Por favor ingrese el peso de su perro desde 2 kg a 90");
+		info= Console.ReadLine();
+		peso= Convert.ToDouble(info);
+		
+		Console.WriteLine("Ingrese el tipo de actividad fisica de su perro");
+		Console.WriteLine("1-Alta");
+		Console.WriteLine("2-Media");
+		Console.WriteLine("3-Baja");
+		
+		info= Console.ReadLine();
+		actividad =Convert.ToInt32(info);
+	    if(peso>=2 && peso<=90){
+		//Peso miniatura
+		if(peso<= 5 && peso>=2){
+		
+		switch(actividad){	
+		case 1:
+		Console.WriteLine("Su perro debe ingenir entre 60 a 115 gramos de alimento");
+	    break;
+		case 2:
+		Console.WriteLine("Su perro debe ingenir entre 55 a 100 gramos de alimento");
+	    break;
+		case 3:
+		Console.WriteLine("Su perro debe ingenir entre 45 a 85 gramos de alimento");
+	    break;
+		
+				
+		}
+		//Cierra switch	
+		}
+		//Cierra if
+			
+		//Peso Peque
+		if(peso<= 10 && peso>5){
+		
+		switch(actividad){	
+		case 1:
+		Console.WriteLine("Su perro debe ingenir entre 115 a 190 gramos de alimento");
+	    break;
+		case 2:
+		Console.WriteLine("Su perro debe ingenir entre 100 a 170 gramos de alimento");
+	    break;
+		case 3:
+		Console.WriteLine("Su perro debe ingenir entre 85 a 145 gramos de alimento");
+	    break;
+		}
+		}
+		//Peso mediano
+		if(peso<=15 && peso>10){
+		
+		switch(actividad){	
+		case 1:
+		Console.WriteLine("Su perro debe ingenir entre 190 a 255 gramos de alimento");
+	    break;
+		case 2:
+		Console.WriteLine("Su perro debe ingenir entre 170 a 225 gramos de alimento");
+	    break;
+		case 3:
+		Console.WriteLine("Su perro debe ingenir entre 145 a 195 gramos de alimento");
+	    break;
+		}
+		}
+		//Peso Pesado
+		if(peso<=25 && peso>15){
+		
+		switch(actividad){	
+		case 1:
+		informe(255,380);
+	    break;
+		case 2:
+		informe(225,330);
+	    break;
+		case 3:
+		informe(195,285);
+	    break;
+		}
+		}
+		//Peso Pesado
+		if(peso<=40 && peso>25){
+		
+		switch(actividad){	
+		case 1:
+		informe(380,535);
+	    break;
+		case 2:
+		informe(330,475);
+	    break;
+		case 3:
+		informe(285,410);
+	    break;
+		}
+		}
+		//Peso Pesado
+		if(peso<=55 && peso>40){
+		
+		switch(actividad){	
+		case 1:
+		informe(535,680);
+	    break;
+		case 2:
+		informe(475,600);
+	    break;
+		case 3:
+		informe(410,520);
+	    break;
+		}
+		}
+		//Peso Pesado
+		if(peso<=70 && peso>55){
+		
+		switch(actividad){	
+		case 1:
+		informe(680,820);
+	    break;
+		case 2:
+		informe(600,720);
+	    break;
+		case 3:
+		informe(520,620);
+	    break;
+		}
+		}
+		
+		//Peso Pesado
+		if(peso<=90 && peso>70){
+		
+		switch(actividad){	
+		case 1:
+		informe(820,985);
+	    break;
+		case 2:
+		informe(720,870);
+	    break;
+		case 3:
+		informe(620,750);
+	    break;
+		}
+		}
+		}
+		else{
+		Console.WriteLine("El peso seleccionado no esta entre los pesos disponibles");
+		}		
+		break;
+		
+		case 2:
+		Console.WriteLine("Por favor ingrese el peso su perro cuando sea adulto");
+		Console.WriteLine("2kg, 5kg, 10kg, 17kg, 25kg, 32kg, 40kg, 50kg, 60kg, 70kg, 90kg");		
+		info= Console.ReadLine();
+		peso= Convert.ToDouble(info);
+		Console.WriteLine("Por favor ingrese la edad expresado en meses de su perro");
+		Console.WriteLine("2 meses, 3 meses, 4 meses, 5 meses, 6 a 12 meses ]");		
+		info= Console.ReadLine();
+		edad= Convert.ToInt32(info);
+		if(peso==2 | peso== 5 | peso== 10 | peso==17 | peso==25 | peso==32 | peso==40 | peso==50 | peso== 60 | peso== 70 | peso==90 && edad<=12 && edad>=2){		
+		if(peso==2 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 50");	
+		}
+		if(peso==2 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 60");	
+		}
+		if(peso==2 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 60");	
+		}
+		if(peso==2 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 60");	
+		}
+		if(peso==2 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 55");	
+		}
+		//peque
+		//peso peque
+		if(peso==5 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 95");	
+		}
+		if(peso==5 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 110");	
+		}
+		if(peso==5 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 115");	
+		}
+		if(peso==5 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 115");	
+		}
+		if(peso==5 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 110");	
+		}
+		if(peso==10 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 155");	
+		}
+		if(peso==10 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 185");	
+		}
+		if(peso==10 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 195");	
+		}
+		if(peso==10 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 190");	
+		}
+		if(peso==10 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 185");	
+		}
+		//peso med
+		if(peso==17 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 215");	
+		}		
+		if(peso==17 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 265");	
+		}	
+		if(peso==17 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 285");	
+		}		
+		if(peso==17 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 285");	
+		}
+		if(peso==17 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 280");	
+		}
+        //peso pesado
+		if(peso==25 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 270");	
+		}
+		if(peso==25 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 350");	
+		}
+		if(peso==25 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 375");	
+		}
+		if(peso==25 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 375");	
+		}
+		if(peso==25 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 370");	
+		}
+		//32kg
+		if(peso==32 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 300");	
+		}		
+		if(peso==32 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 400");	
+		}
+		if(peso==32 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 445");	
+		}
+		if(peso==32 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 450");	
+		}
+		if(peso==32 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 450");	
+		}
+		//40kg		
+		if(peso==40 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 355");	
+		}
+		if(peso==40 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 475");	
+		}
+		if(peso==40 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 525");	
+		}
+		if(peso==40 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 530");	
+		}
+		if(peso==40 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son 530");	
+		}
+		//50kg		
+		if(peso==50 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 405");	
+		}
+		if(peso==50 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 545");	
+		}
+		if(peso==50 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 610");	
+		}
+		if(peso==50 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son 625");	
+		}
+		if(peso==50 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		//60kg		
+		if(peso==60 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 450");	
+		}
+		if(peso==60 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 605");	
+		}
+		if(peso==60 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son 685");	
+		}
+		if(peso==60 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==60 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		//70kg		
+		if(peso==70 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 485");	
+		}
+		if(peso==70 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son 670");	
+		}
+		if(peso==70 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==70 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==70 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		//90kg		
+		if(peso==90 && edad==2){
+		Console.WriteLine("Los gramos de alimento que require su perro son 580");	
+		}
+		if(peso==90 && edad==3){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==90 && edad==4){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==90 && edad==5){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+		if(peso==90 && edad>=6 && edad<=12){
+		Console.WriteLine("Los gramos de alimento que require su perro son indefinidas");	
+		}
+			
+		}
+		else{
+		Console.WriteLine("El peso seleccionado no esta entre los pesos o edades disponibles");
+		}		
+		break;
+				
+		}		
+		Console.WriteLine("Si desea continuar seleccione cualqier numero y si no desea hacerlo presione 0 ");
+		info =Console.ReadLine();
+		opciones= Convert.ToInt32(info);
+		}while(opciones !=0);
+		
+			
+		}	
+	static void informe(int gramos,int gramos2){
+		Console.Write("Su perro debe ingenir entre ");
+		Console.Write(gramos);
+		Console.Write(" a ");
+		Console.Write(gramos2);
+		Console.WriteLine(" de alimento");
+	
+	}
+}
